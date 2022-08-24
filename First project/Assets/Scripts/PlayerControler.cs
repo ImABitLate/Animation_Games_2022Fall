@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControler : MonoBehaviour
 {
     public int speed; //set speed
+    public float rotSpeed; // Rotation
     public float hInput; // horizontal input
     public float vInput; // vertical input
     
@@ -17,6 +18,9 @@ public class PlayerControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        hInput = Input.GetAxis("Horizontal");
+        vInput = Input.GetAxis("Vertical");
+
+
     }
 }
