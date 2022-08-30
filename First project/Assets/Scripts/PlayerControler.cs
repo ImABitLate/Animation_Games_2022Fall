@@ -6,7 +6,7 @@ public class PlayerControler : MonoBehaviour
 {
     // Access Mod, Data Type, Name ;
     public int speed; //set speed
-    public float rotSpeed; // Rotation
+    public float rotSpeed; // Rotation speed
     public float hInput; // horizontal input
     public float vInput; // vertical input
     
@@ -24,6 +24,7 @@ public class PlayerControler : MonoBehaviour
         vInput = Input.GetAxis("Vertical");
 
         //move the character around
+
         transform.Rotate(Vector3.up, rotSpeed * hInput * Time.deltaTime); //Rotate Left and Right
 
         transform.Translate(Vector3.forward * speed * vInput * Time.deltaTime); //Forward and Backward Movement
