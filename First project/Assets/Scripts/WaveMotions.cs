@@ -17,6 +17,6 @@ public class WaveMotions : MonoBehaviour
     void Update()
     {
         //set the movement
-      
+        //transform.Translate(waveSpeeed);
     }
 }
