@@ -9,6 +9,8 @@ public class PlayerControler : MonoBehaviour
     public float rotSpeed; // Rotation speed
     public float hInput; // horizontal input
     public float vInput; // vertical input
+    public float jumpForce; // jump hight
+    public Rigidbody playerRB; // reference Rigidbody component
     
     // Start is called before the first frame update
     void Start()
@@ -28,5 +30,9 @@ public class PlayerControler : MonoBehaviour
         transform.Rotate(Vector3.up, rotSpeed * hInput * Time.deltaTime); //Rotate Left and Right
 
         transform.Translate(Vector3.forward * speed * vInput * Time.deltaTime); //Forward and Backward Movement
+
+        if (Input.GetKeyDown(KeyCode.Space)) //if player hits the spacebar
+            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse); //Makes player jump
+      
     }
 }
