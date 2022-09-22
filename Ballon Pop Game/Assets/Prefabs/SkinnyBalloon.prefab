@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 5933648742130365182}
   - component: {fileID: 5933648742130365169}
   - component: {fileID: 5933648742130365181}
+  - component: {fileID: -8521021859553040353}
   m_Layer: 0
   m_Name: SkinnyBalloon
   m_TagString: Untagged
@@ -304,3 +305,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickToPop: 3
   scaleToIncrease: 0.1
+  scoreToGive: 0
+--- !u!114 &-8521021859553040353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5933648742130365168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44359d66b1734763a8bff167d2cb27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  upperBound: 25

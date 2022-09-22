@@ -10,14 +10,16 @@ public class Balloon : MonoBehaviour
 
     public float scaleToIncrease = 0.0f; //Scale increase each time the ballon is clicked
 
-    //public ScoreManager ScoreManager; //A variable to reference the Score Manager
+    public int scoreToGive; //score give for popped balloon.
+
+    private ScoreManager scoreManager; //A variable to reference the Score Manager
+
+
     // Start is called before the first frame update
-
-
     void Start()
     {
         //Reference ScoreManager Component
-        //scoreManager = GameObject.Find("ScoreManager").
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         
     }
 
@@ -31,9 +33,9 @@ public class Balloon : MonoBehaviour
 
         if(clickToPop == 0)
         {
-            //ScoreManager.IncreaseScoreText(scoreToGive);
+            scoreManager.IncreaseScoreText(scoreToGive);
 
-            Destroy(gameObject);
+            Destroy(gameObject); //POP Balloon
         }
     }
 }

@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 229157633}
+  - component: {fileID: 229157634}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -153,6 +154,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &229157634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229157632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecc57668ae5c48c593d815b2bbb90e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  scoreText: {fileID: 943748421}
 --- !u!1 &419510637
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +574,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087299582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.79, y: 2.83, z: -10}
+  m_LocalPosition: {x: -2.79, y: 5.19, z: -13.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -669,6 +684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1813087106}
+  - component: {fileID: 1813087107}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -684,12 +700,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1813087105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2074323, y: -0.41, z: 0.9609928}
+  m_LocalPosition: {x: -3.17, y: -0.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1813087107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813087105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 112bd31eabaca4f948c0a2c44123bf72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonPrefabs:
+  - {fileID: 6775671881577602635, guid: bf71b296f3f9e43b8b66971231747e5a, type: 3}
+  - {fileID: 5175800253887782745, guid: 6b7fc964918da45b98dc0f6d9b803e1d, type: 3}
+  - {fileID: 5933648742130365168, guid: 25192ef14a1334d999fe4ac9c5675e26, type: 3}
+  startDelay: 0.5
+  spawnInterval: 1.5
+  xRange: 10
 --- !u!1 &1874921160
 GameObject:
   m_ObjectHideFlags: 0

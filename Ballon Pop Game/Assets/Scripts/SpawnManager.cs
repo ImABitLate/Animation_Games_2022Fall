@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void SpawnRandomBalloon()
     {
         //Get a random postion on the x-axis
         Vector3 spawnPos = new Vector3(Random.Range(-xRange, xRange), 10, 0);

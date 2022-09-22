@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5175800253887782751}
   - component: {fileID: 5175800253887782744}
   - component: {fileID: 5175800253887782748}
+  - component: {fileID: -910081585485831320}
   m_Layer: 0
   m_Name: PuffyBalloon
   m_TagString: Untagged
@@ -112,6 +113,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickToPop: 3
   scaleToIncrease: 0.1
+  scoreToGive: 0
+--- !u!114 &-910081585485831320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5175800253887782745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44359d66b1734763a8bff167d2cb27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  upperBound: 25
 --- !u!1 &5175800255638478912
 GameObject:
   m_ObjectHideFlags: 0

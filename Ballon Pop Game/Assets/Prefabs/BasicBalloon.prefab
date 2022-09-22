@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 6775671881577602629}
   - component: {fileID: 6775671881577602634}
   - component: {fileID: 6775671881577602630}
+  - component: {fileID: 4935503060285560061}
   m_Layer: 0
   m_Name: BasicBalloon
   m_TagString: Untagged
@@ -208,6 +209,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickToPop: 3
   scaleToIncrease: 0.1
+  scoreToGive: 0
+--- !u!114 &4935503060285560061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6775671881577602635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44359d66b1734763a8bff167d2cb27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  upperBound: 25
 --- !u!1 &6775671882023852942
 GameObject:
   m_ObjectHideFlags: 0
