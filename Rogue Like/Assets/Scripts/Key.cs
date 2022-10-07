@@ -13,6 +13,15 @@ public class Key : PickUp
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            gm.AddKey(amount);
+            Destroy(gameObject);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
