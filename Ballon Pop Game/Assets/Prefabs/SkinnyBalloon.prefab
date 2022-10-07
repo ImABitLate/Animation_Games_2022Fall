@@ -305,7 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickToPop: 3
   scaleToIncrease: 0.1
-  scoreToGive: 0
+  scoreToGive: 1
 --- !u!114 &-8521021859553040353
 MonoBehaviour:
   m_ObjectHideFlags: 0
