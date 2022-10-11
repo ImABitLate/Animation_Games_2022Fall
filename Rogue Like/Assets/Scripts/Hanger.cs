@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : PickUp
+public class Hanger : PickUp
 {
-
-    private GameManager gm;
+    private GameManager gm;//set up game manager
 
     // Start is called before the first frame update
     void Start()
@@ -13,20 +12,9 @@ public class Key : PickUp
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.CompareTag("Player"))
-        {
-            gm.AddKey(amount);
-            Destroy(gameObject);
-        }
-    }
-
     // Update is called once per frame
     void Update()
     {
         
     }
-
-    
 }

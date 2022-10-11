@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int key;
+    public int coin;
+    public int hanger;
 
 
     // Start is called before the first frame update
@@ -19,5 +21,21 @@ public class GameManager : MonoBehaviour
         
     }
 
-    
+    public void BreakHanger(int amount)
+    {
+
+    }
+
+    public void AddCoin(int amount)
+    {
+        coin += amount;
+        Debug.Log("You have " + coin + " coin(s).");
+    }
+
+    public void AddKey(int amount)
+    {
+        //Adding Key to key amount (key inventory)
+        key += amount;
+        Debug.Log("You have " + key + " key(s).");
+    }
 }
