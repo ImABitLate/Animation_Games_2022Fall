@@ -29,13 +29,13 @@ public class GameManager : MonoBehaviour
     public void AddCoin(int amount)
     {
         coin += amount;
-        Debug.Log("You have " + coin + " coin(s).");
+        Debug.Log("You have " + coin + " chip(s).");
     }
 
     public void AddKey(int amount)
     {
         //Adding Key to key amount (key inventory)
         key += amount;
-        Debug.Log("You have " + key + " key(s).");
+        Debug.Log("You have " + key + " plug(s).");
     }
 }

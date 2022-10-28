@@ -24,7 +24,7 @@ public class Door : MonoBehaviour
         }
         else
         {
-            Debug.Log("Door is locked. You need a key");
+            Debug.Log("Door is locked. You need a plug.");
         }
     }
 
