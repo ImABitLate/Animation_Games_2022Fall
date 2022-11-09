@@ -2535,6 +2535,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1630942231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1571009360816006522, guid: 033f9dd23da0940ebbb857f2c58a7fbc, type: 3}
+  m_PrefabInstance: {fileID: 1571009360815488383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1630942232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630942231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: becf1082818d94507aa0396da0aafca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 0
+  deathDelay: 0.5
 --- !u!1 &1671999235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2679,6 +2699,7 @@ GameObject:
   - component: {fileID: 1672783350}
   - component: {fileID: 1672783351}
   - component: {fileID: 1672783352}
+  - component: {fileID: 1672783353}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2811,6 +2832,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1672783353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672783347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64cb26419f47c4c54b192a76b362baf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 0
+  deathDelay: 0.5
 --- !u!1001 &1717559927
 PrefabInstance:
   m_ObjectHideFlags: 0
