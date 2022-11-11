@@ -2700,6 +2700,7 @@ GameObject:
   - component: {fileID: 1672783351}
   - component: {fileID: 1672783352}
   - component: {fileID: 1672783353}
+  - component: {fileID: 1672783354}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2844,9 +2845,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64cb26419f47c4c54b192a76b362baf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 10
   currentHealth: 0
   deathDelay: 0.5
+--- !u!114 &1672783354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672783347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d6dd6f944f04a05b5a40eb22199795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDelay: 0.5
+  attackPos: {fileID: 1672783349}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 8
+  attackRange: 3
+  damage: 3
 --- !u!1001 &1717559927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3776,6 +3796,10 @@ PrefabInstance:
     - target: {fileID: 1571009360816006522, guid: 033f9dd23da0940ebbb857f2c58a7fbc, type: 3}
       propertyPath: m_Name
       value: RoboAttatch_Targeting
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571009360816006522, guid: 033f9dd23da0940ebbb857f2c58a7fbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 033f9dd23da0940ebbb857f2c58a7fbc, type: 3}
