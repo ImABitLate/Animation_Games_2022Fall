@@ -24,6 +24,9 @@ public class FPSController : MonoBehaviour
         //Get Components
         camera = Camera.main;
         rb = GetComponent<Rigidbody>();
+
+        //Freexe and Disable Cursor
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Start is called before the first frame update
@@ -36,6 +39,12 @@ public class FPSController : MonoBehaviour
     void Update()
     {
         PlayerMove();
+        CameraLook();
+
+        if(Input.GetButtonDown("Jump"))
+        {
+            PlayerJump();
+        }
     }
 
     void PlayerMove()
@@ -43,12 +52,33 @@ public class FPSController : MonoBehaviour
         float x = Input.GetAxis("Horizontal") * moveSpeed; // Get left and right input
         float z = Input.GetAxis("Vertical") * moveSpeed; // Get forward and back input
 
-        rb.velocity = new Vector3(x, rb.velocity.y, z); //Applys velocity on x and z axises. It makes the player move.
+        //Move the player in realtion to the cameras direction
+        Vector3 dir = transform.right * x + transform.forward * z;
+        dir.y = rb.velocity.y;
+
+        rb.velocity = dir; //Applys velocity on x and z axises. It makes the player move.
     }
 
     void CameraLook()
     {
         float y = Input.GetAxis("Mouse X") * lookSensitivity;
         rotX += Input.GetAxis("Mouse Y") * lookSensitivity;
+
+        rotX = Mathf.Clamp(rotX, minLooksx, maxLooksx); //Clamp the vertical rotation of the player so it doesn't flip around
+
+        // Apply rotation to the player
+        camera.transform.localRotation = Quaternion.Euler(-rotX, 0, 0);
+        transform.eulerAngles += Vector3.up * y;
+    }
+
+    void PlayerJump()
+    {
+        //Ray cast for Ground Detection
+        Ray ray = new Ray(transform.position, Vector3.down);
+
+        if(Physics.Raycast(ray, 1.1f))
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 }
