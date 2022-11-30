@@ -13,7 +13,7 @@ public class FPSController : MonoBehaviour
     public float lookSensitivity; // mouse look sensitivity
     public float maxLooksx; // lowest point we can look down
     public float minLooksx; // highest point we can look up
-    public float rotX; // Current x rotation of the camera
+    private float rotX; // Current x rotation of the camera
 
     [Header("Pirvate Variables")]
     private Camera camera; // reference the main camera
